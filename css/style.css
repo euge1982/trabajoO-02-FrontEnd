@@ -1,54 +1,54 @@
+/*Elimina margenes y rellenos predeterminados de todos los elementos*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*Estilos para el body*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: center;   
+    align-items: center;   
+    height: 100vh;   /*Para que el body ocupe altura de la ventana*/
     background-color: #f0f0f0;
+   
 }
 
-header {
-    margin: 20px 0;
-}
-
+/*Estilos para la galeria*/
 .galeria {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;     /* Centrar verticalmente */
+    justify-content: center;   /*Centra las imagenes horizontalmente*/
+    align-items: center;   /*Centra las imagenes verticalmente*/
     gap: 20px;
-    max-width: 100%;
-    padding: 20px;
+    max-width: 100%;   /*Ancho maximo de la galeria*/
+    margin: auto;
+    height: 100vh;
 }
 
+/*Estilo para las imagenes dentro de la galeria*/
 .galeria img {
-    width: 150px;           /* Ancho fijo para todas las imágenes */
-    height: 200px;          /* Alto fijo para todas las imágenes */
-    object-fit: cover;      /* Mantiene la proporción de la imagen */
-    transition: transform 0.3s ease;
+    width: 200px;           
+    height: 250px;          
+    transition: transform 0.3s ease;   /*Se añade una transicion cuando las imagenes se agrandan al pasar el cursor*/
+    border: solid 1px;
 }
 
+/*Efecto hover para las imagenes, que se agrandan un 10% cuando el cursor pasa sobre ella*/
 .galeria img:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    .galeria {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
+/*Estilo para el footer*/
 footer {
+    height: 50px;
+    width: 100%;
     background-color: cadetblue;
     border: solid 1px;
-    margin-top: 50px;
-   text-align: end;
+    margin-top: auto;   /*Para que el footer se mantenga al final de la pagina*/
+    text-align: center;
+    align-content: space-around;
 }
